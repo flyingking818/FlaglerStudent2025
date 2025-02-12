@@ -99,6 +99,7 @@
                     <connections>
                         <outlet property="firstNameTextField" destination="S4F-P4-CBb" id="apH-yZ-T87"/>
                         <outlet property="lastNameTextField" destination="7J2-M7-9MV" id="bSm-jD-CNA"/>
+                        <outlet property="mapView" destination="gLv-iZ-Irg" id="4pP-3r-EXJ"/>
                         <outlet property="messageLabel" destination="HJu-bl-PsH" id="Yhf-IP-kSv"/>
                     </connections>
                 </viewController>
