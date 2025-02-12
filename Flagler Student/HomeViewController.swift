@@ -9,9 +9,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+   
     @IBOutlet weak var messageLabel: UILabel!
     
-
+    @IBOutlet weak var firstNameTextField: UITextField!
+    
+    @IBOutlet weak var lastNameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,9 +24,18 @@ class HomeViewController: UIViewController {
     
     @IBAction func submitButton(_ sender: UIButton) {
         
-        messageLabel.text = "Hello world! Thank you for your submission!"
+        //Use the same object-oriented programming techniques
+        //Access the members of the instantiated objects
+        
+        let firstName = firstNameTextField.text ?? ""
+        let lastName = lastNameTextField.text ?? ""
+        
+        //Interpolation is preferred in Swift!
+        messageLabel.text = "Welcome to Flagler,\(firstName) \(lastName)! Flagler is beautiful!"
+        
         
     }
+    
     
 }
 
