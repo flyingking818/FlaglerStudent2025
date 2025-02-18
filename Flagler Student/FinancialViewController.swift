@@ -3,16 +3,35 @@
 //  Flagler Student
 //
 //  Created by Jeremy Wang on 2/17/25.
-//
+//  Updated your documentation, explain the enhancements
+
+
 
 import UIKit
 
 class FinancialViewController: UIViewController {
-
+    
+    //Declare the outlets
+        
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var tuitionTextField: UITextField!
+    @IBOutlet weak var scholarshipTextField: UITextField!
+    @IBOutlet weak var gradeLevelTextField: UITextField!
+    @IBOutlet weak var honorStudentSwitch: UISwitch!
+    @IBOutlet weak var messageLabel: UILabel!  //ouput
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func calculateButton(_ sender: UIButton) {
+        //Processing... logic...
+        
+        
+        
     }
     
 

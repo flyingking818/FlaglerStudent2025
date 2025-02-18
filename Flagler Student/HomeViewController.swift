@@ -71,6 +71,12 @@ class HomeViewController: UIViewController {
         let lastName = lastNameTextField.text ?? ""
          */
         
+        
+        //if let will proceed with the validation is successful, if not, use else...
+        //This potentially will lead to a large number of nested ifs...
+        //so, use this only for a limited number of validations.
+        
+        
         guard let firstName = firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !firstName.isEmpty,
              let lastName = lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !lastName.isEmpty
         else {
