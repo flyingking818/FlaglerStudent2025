@@ -20,6 +20,14 @@ class FinancialViewController: UIViewController {
     @IBOutlet weak var honorStudentSwitch: UISwitch!
     @IBOutlet weak var messageLabel: UILabel!  //ouput
     
+    @IBOutlet weak var loanView: UIView!
+    @IBOutlet weak var loanAmountTextField: UITextField!
+    @IBOutlet weak var aprTextField: UITextField!
+    @IBOutlet weak var yearsTextField: UITextField!
+    @IBOutlet weak var pmtMessageLabel: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +36,9 @@ class FinancialViewController: UIViewController {
         // viewDidLoad is ideal for screen initialization
         honorStudentSwitch.isOn = false
         messageLabel.isHidden = true
+        
+        //Hide the loan subview by default
+        loanView.isHidden = true
     }
     
     
@@ -91,6 +102,9 @@ class FinancialViewController: UIViewController {
         let message: String  //formal declaration with a type
         if balance > 10000 {
             message = "\(name), your estimated balance is \(balance.formatted(.currency(code: "USD"))). You qualify for a student loan."
+            loanView.isHidden = false
+            loanAmountTextField.text = String(balance)
+            
         } else {
             message = "\(name), your estimated balance is \(balance.formatted(.currency(code: "USD")))"
         }
@@ -99,6 +113,50 @@ class FinancialViewController: UIViewController {
         messageLabel.text = message
        
         
+        
+    }
+    
+    
+    //PMT calculation
+    
+    @IBAction func calculatePMTButton(_ sender: UIButton) {
+        //Calculate by using the PTM function
+        //Here, it's better to validate
+        let loanAmount = loanAmountTextField.text.flatMap(Double.init) ?? 0
+        let apr = aprTextField.text.flatMap(Double.init) ?? 0
+        let years = yearsTextField.text.flatMap(Int.init) ?? 0
+        
+        //let monthlyPayment = PMT(loanAmount: loanAmount, apr: apr, years: years)
+        let monthlyPayment = PMT(loanAmount, apr, years)
+        
+        pmtMessageLabel.text = "Monthly Payment: \(monthlyPayment.formatted(.currency(code: "USD")))"
+        pmtMessageLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        
+        
+        
+    }
+    
+    //Make the paramter labels optional by using the underscore
+    func PMT (_ loanAmount: Double, _ apr: Double, _ years: Int) -> Double {
+        return PMT(loanAmount: loanAmount, apr: apr, years: years)
+    }
+    
+    //This requires the parameter names.
+    func PMT (loanAmount: Double, apr: Double, years: Int) -> Double {
+        
+        //Calculate the periodic rate (monthly)
+        let monthlyRate = apr / 100 / 12
+        let numberOfPayments = years * 12
+        
+        let numberator: Double = monthlyRate * pow(1 + monthlyRate, Double(numberOfPayments))
+        let denominator = pow(1 + monthlyRate, Double(numberOfPayments)) - 1
+        
+        let pmt = loanAmount * (numberator / denominator)
+        
+        /*
+        let pmt = loanAmount * monthlyRate * pow(1 + monthlyRate, Double(numberOfPayments)) / (pow(1 + monthlyRate, Double(numberOfPayments)) - 1)
+        */
+        return pmt
         
     }
     
