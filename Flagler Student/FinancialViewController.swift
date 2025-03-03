@@ -149,7 +149,7 @@ class FinancialViewController: UIViewController {
         let numberOfPayments = years * 12
         
         let numberator: Double = monthlyRate * pow(1 + monthlyRate, Double(numberOfPayments))
-        let denominator = pow(1 + monthlyRate, Double(numberOfPayments)) - 1
+        let denominator: Double = pow(1 + monthlyRate, Double(numberOfPayments)) - 1
         
         let pmt = loanAmount * (numberator / denominator)
         
