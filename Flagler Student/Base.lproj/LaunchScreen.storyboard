@@ -19,13 +19,26 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="IwE-2e-3fx">
                                 <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="100" image="FC-logo-small" translatesAutoresizingMaskIntoConstraints="NO" id="3Jg-5h-7Ja">
+                                <rect key="frame" x="70" y="428" width="300" height="100"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Flagler College" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d56-ny-vax">
+                                <rect key="frame" x="116" y="548" width="208" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="IwE-2e-3fx" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="1te-Dv-N9R"/>
+                            <constraint firstItem="3Jg-5h-7Ja" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8wJ-Cz-bB1"/>
+                            <constraint firstItem="d56-ny-vax" firstAttribute="top" secondItem="3Jg-5h-7Ja" secondAttribute="bottom" constant="20" id="DWY-f0-1aw"/>
+                            <constraint firstItem="d56-ny-vax" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="PjM-E9-hdD"/>
                             <constraint firstAttribute="bottom" secondItem="IwE-2e-3fx" secondAttribute="bottom" id="ffM-kG-F8L"/>
                             <constraint firstItem="IwE-2e-3fx" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ksO-1h-JMy"/>
+                            <constraint firstItem="3Jg-5h-7Ja" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="n2H-1b-b1l"/>
                             <constraint firstItem="IwE-2e-3fx" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="syA-yw-vbm"/>
                         </constraints>
                     </view>
@@ -36,6 +49,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FC-logo-small" width="108" height="30"/>
         <image name="background" width="384.66665649414062" height="582"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
