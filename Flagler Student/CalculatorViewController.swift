@@ -8,6 +8,12 @@
 import UIKit
 
 class CalculatorViewController: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet weak var displayLabel: UILabel!
+    
+    // MARK: - Properties
+    private var calculator = CalculatorModel()
+    private var userIsTyping = false  // tracks if user is in the middle of typing digits
 
     override func viewDidLoad() {
         super.viewDidLoad()
