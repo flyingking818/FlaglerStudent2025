@@ -572,6 +572,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Calculator" image="brain" catalog="system" selectedImage="brain.fill" id="rFA-jp-8ey"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="displayLabel" destination="DNs-Te-SYH" id="spr-dZ-ojW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3E-z2-QY8" sceneMemberID="firstResponder"/>
             </objects>
