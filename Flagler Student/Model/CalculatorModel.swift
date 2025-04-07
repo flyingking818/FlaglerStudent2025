@@ -101,7 +101,7 @@ struct CalculatorModel {
             case "×":
                 return lhs * rhs
             case "÷":
-                // Avoid dividing by zero
+                // Avoid dividing by zero, tenary conditional statement
                 return rhs == 0 ? 0 : lhs / rhs
             default:
                 return rhs
