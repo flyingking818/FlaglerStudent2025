@@ -6,6 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2D237ABD2DA44D3B0097D9EE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2D237ABC2DA44D3B0097D9EE /* FirebaseAuth */; };
+		2D237ABF2DA44D3B0097D9EE /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 2D237ABE2DA44D3B0097D9EE /* FirebaseAuthCombine-Community */; };
+		2D237AC12DA44D3B0097D9EE /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2D237AC02DA44D3B0097D9EE /* FirebaseCore */; };
+		2D237AC32DA44D3B0097D9EE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 2D237AC22DA44D3B0097D9EE /* FirebaseDatabase */; };
+		2D237AC52DA44D3B0097D9EE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2D237AC42DA44D3B0097D9EE /* FirebaseFirestore */; };
+		2D237AC72DA44D3B0097D9EE /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 2D237AC62DA44D3B0097D9EE /* FirebaseFirestoreCombine-Community */; };
+		2D237AC92DA44D3B0097D9EE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 2D237AC82DA44D3B0097D9EE /* FirebaseStorage */; };
+		2D237ACB2DA44D3B0097D9EE /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 2D237ACA2DA44D3B0097D9EE /* FirebaseStorageCombine-Community */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		2D73B0452D481E4E00FE0CE7 /* Flagler Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flagler Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +47,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D237ABD2DA44D3B0097D9EE /* FirebaseAuth in Frameworks */,
+				2D237AC12DA44D3B0097D9EE /* FirebaseCore in Frameworks */,
+				2D237ACB2DA44D3B0097D9EE /* FirebaseStorageCombine-Community in Frameworks */,
+				2D237AC32DA44D3B0097D9EE /* FirebaseDatabase in Frameworks */,
+				2D237AC72DA44D3B0097D9EE /* FirebaseFirestoreCombine-Community in Frameworks */,
+				2D237AC92DA44D3B0097D9EE /* FirebaseStorage in Frameworks */,
+				2D237AC52DA44D3B0097D9EE /* FirebaseFirestore in Frameworks */,
+				2D237ABF2DA44D3B0097D9EE /* FirebaseAuthCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +97,14 @@
 			);
 			name = "Flagler Student";
 			packageProductDependencies = (
+				2D237ABC2DA44D3B0097D9EE /* FirebaseAuth */,
+				2D237ABE2DA44D3B0097D9EE /* FirebaseAuthCombine-Community */,
+				2D237AC02DA44D3B0097D9EE /* FirebaseCore */,
+				2D237AC22DA44D3B0097D9EE /* FirebaseDatabase */,
+				2D237AC42DA44D3B0097D9EE /* FirebaseFirestore */,
+				2D237AC62DA44D3B0097D9EE /* FirebaseFirestoreCombine-Community */,
+				2D237AC82DA44D3B0097D9EE /* FirebaseStorage */,
+				2D237ACA2DA44D3B0097D9EE /* FirebaseStorageCombine-Community */,
 			);
 			productName = "Flagler Student";
 			productReference = 2D73B0452D481E4E00FE0CE7 /* Flagler Student.app */;
@@ -107,6 +134,9 @@
 			);
 			mainGroup = 2D73B03C2D481E4E00FE0CE7;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2D237ABB2DA44D3B0097D9EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2D73B0462D481E4E00FE0CE7 /* Products */;
 			projectDirPath = "";
@@ -333,6 +363,60 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2D237ABB2DA44D3B0097D9EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D237ABC2DA44D3B0097D9EE /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D237ABB2DA44D3B0097D9EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		2D237ABE2DA44D3B0097D9EE /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D237ABB2DA44D3B0097D9EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		2D237AC02DA44D3B0097D9EE /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D237ABB2DA44D3B0097D9EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		2D237AC22DA44D3B0097D9EE /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D237ABB2DA44D3B0097D9EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		2D237AC42DA44D3B0097D9EE /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D237ABB2DA44D3B0097D9EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		2D237AC62DA44D3B0097D9EE /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D237ABB2DA44D3B0097D9EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		2D237AC82DA44D3B0097D9EE /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D237ABB2DA44D3B0097D9EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		2D237ACA2DA44D3B0097D9EE /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D237ABB2DA44D3B0097D9EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D73B03D2D481E4E00FE0CE7 /* Project object */;
 }
