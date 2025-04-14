@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import FirebaseAuth
 
 class AcademicsViewController: UIViewController {
 
@@ -51,10 +52,17 @@ class AcademicsViewController: UIViewController {
             return
         }
         
+        //Option 2: use the Course Model
+        
+        //Added the userID column for selectively show user documents
+        
+        let currentUserID = Auth.auth().currentUser?.uid ?? "UnknownUser"
+                
         db.collection("Courses").addDocument(data: [
             "CourseID": courseID,
             "CourseName": courseName,
             "CreditHours": creditHours,
+            "UserID": currentUserID,
             "Date": Date().timeIntervalSince1970
         ]) { error in
             if let e = error {

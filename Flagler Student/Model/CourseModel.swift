@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct CourseModel {
+    var courseID: String
+    var courseName: String
+    var creditHours: Int
+    var currentUserID: String
+}
